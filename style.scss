@@ -41,34 +41,32 @@ header {
   .card  {
     width: 100%;
     padding: 6px;
-    transition: transform .2s;
     .container-img  {
       position: relative;
       .image {
         width: 28vw;
       }
       .image:hover {
-          transform: scale(1.05);
-          opacity: 0.4;
-          z-index: 300;
-        }
+        transform: scale(1.05);
+        opacity: 0.4;
+        z-index: 300;
       }
-      .overlay  {
-        position: absolute;
-        display: none;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50% -50%);
-        .titleModal {
-          color: white;
-        }
-        .textModal  {
-          color: white;
-          text-transform: lowercase;
-        }
-        :hover  {
-          display: block;
-        }
+    }
+    .overlay  {
+      position: absolute;
+      display: none;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50% -50%);
+      .titleModal {
+        color: white;
+      }
+      .textModal  {
+        color: white;
+        text-transform: lowercase;
+      }
+      :hover  {
+        display: block;
       }
     }
   }
@@ -97,14 +95,17 @@ header {
       }
     }
     #titleModal {
+      position: absolute;
     }
     ::first-letter  {
       color: rgb(204, 16, 16);
       font-size: 130%;
     }
     #textModal  {
+      position: absolute;
     }
     .control  {
+      display: none;
     }
   }
 }
