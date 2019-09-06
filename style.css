@@ -1,9 +1,10 @@
 body {
-  margin: 0 auto;
-  background-color: #221f1f;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
 }
 
-header {
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,21 +12,22 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: fixed;
+  z-index: 1;
   top: 0;
   height: 8vh;
-  width: 100%;
-  background-color: white;
+  width: 99vw;
+  background-color: #f7f7f7;
 }
 
-header .logo {
+nav .logo {
   margin: 2vh 2vh 2vh 6vh;
 }
 
-header .logo img {
+nav .logo img {
   height: 4vh;
 }
 
-header .links ul {
+nav .links ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,48 +35,45 @@ header .links ul {
   list-style-type: none;
 }
 
-header .links ul li {
+nav .links ul li {
   margin: 2vh 3vh 2vh 2vh;
 }
 
-header .links ul li img {
+nav .links ul li img {
   height: 3vh;
 }
 
-.containerBlock {
+.container {
+  width: 98vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 14vh 5vw 5vh 1vw;
-  list-style-type: none;
+  margin-top: 8vh;
+  margin-left: 1vw;
 }
 
-.containerBlock .card {
+.container .container-card {
+  padding: 2px;
+  width: 33%;
+}
+
+.container .container-card .image {
   width: 100%;
-  padding: 6px;
 }
 
-.containerBlock .card .container-img {
-  position: relative;
-}
-
-.containerBlock .card .container-img .image {
-  width: 28vw;
-}
-
-.containerBlock .card .container-img .image:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.container .container-card .image:hover {
   opacity: 0.4;
   z-index: 300;
 }
 
-.containerBlock .card .overlay {
+.container .container-card .overlay {
   position: absolute;
   display: none;
   left: 50%;
@@ -83,16 +82,16 @@ header .links ul li img {
           transform: translate(-50% -50%);
 }
 
-.containerBlock .card .overlay .titleModal {
+.container .container-card .overlay .titleModal {
   color: white;
 }
 
-.containerBlock .card .overlay .textModal {
+.container .container-card .overlay .textModal {
   color: white;
   text-transform: lowercase;
 }
 
-.containerBlock .card .overlay :hover {
+.container .container-card .overlay .textModal:hover {
   display: block;
 }
 
@@ -115,7 +114,7 @@ header .links ul li img {
   font-weight: bold;
 }
 
-.containerModal .modal .close :hover, .containerModal .modal .close :focus {
+.containerModal .modal .close:hover, .containerModal .modal .close:focus {
   color: red;
   text-decoration: none;
   cursor: pointer;

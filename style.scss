@@ -1,16 +1,18 @@
 body  {
-  margin: 0 auto;
-  background-color: rgb(34, 31, 31);
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
 }
 
-header {
+nav {
   display: flex;
   justify-content: space-between;
   position: fixed;
+  z-index: 1;
   top: 0;
   height: 8vh;
-  width: 100%;
-  background-color: white;
+  width: 99vw;
+  background-color: #f7f7f7;
   .logo {
     margin: 2vh 2vh 2vh 6vh;
     img {
@@ -32,24 +34,21 @@ header {
   }
 }
 
-.containerBlock {
+.container {
+  width: 98vw;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
-  margin: 14vh 5vw 5vh 1vw;
-  list-style-type: none;
-  .card  {
-    width: 100%;
-    padding: 6px;
-    .container-img  {
-      position: relative;
-      .image {
-        width: 28vw;
-      }
-      .image:hover {
-        transform: scale(1.05);
-        opacity: 0.4;
-        z-index: 300;
+  margin-top: 8vh;
+  margin-left: 1vw;
+  .container-card  {
+    padding: 2px;
+    width: 33%;
+    .image {
+      width: 100%;
+      &:hover {
+      opacity: 0.4;
+      z-index: 300;
       }
     }
     .overlay  {
@@ -64,9 +63,9 @@ header {
       .textModal  {
         color: white;
         text-transform: lowercase;
-      }
-      :hover  {
+        &:hover  {
         display: block;
+        }
       }
     }
   }
@@ -88,7 +87,7 @@ header {
       float: right;
       font-size: 28px;
       font-weight: bold;
-      :hover, :focus {
+      &:hover, &:focus {
         color: red;
         text-decoration: none;
         cursor: pointer;
